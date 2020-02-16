@@ -3,10 +3,9 @@ const sha256 = require("js-sha256").sha256;
 const config = require("../../middleware/config");
 
 //mongo connection options
-mongoose.connect(
-  "mongodb://gauravroy:gaurav1995@ds115434.mlab.com:15434/rice",
-  { useNewUrlParser: true }
-);
+mongoose.connect("mongodb://username:passowrd@ds115434.mlab.com:15434/rice", {
+  useNewUrlParser: true
+});
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", function(callback) {
